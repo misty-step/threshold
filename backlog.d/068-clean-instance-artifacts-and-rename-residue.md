@@ -51,16 +51,23 @@ not historical evidence, and retiring dead local/planning surfaces.
 
 1. **Run artifact classification.** Start from the current tracked count
    (`find runs -maxdepth 2 -type f`) and classify before moving or deleting.
-2. **Rename residue pass.** Replace live-product `daedalus` references and
-   document preserved historical references.
-3. **README Naming rewrite.** Make the Threshold rationale current and remove
-   Crucible from the candidate-name list.
-4. **Dead-surface retirement.** Archive or delete stale UI labs, plans, and old
-   migration prose.
-5. **Local artifact flush.** Remove untracked local caches and large generated
-   job artifacts from the checkout without touching committed evidence.
-6. **Pycompat retirement decision.** Keep only compatibility tests that still
-   protect current Rust behavior.
+2. **Rename residue pass.** DONE (2026-07-02, operator-ordered daedalus→threshold
+   rename). Replaced the two live-code `daedalus` references in
+   `crates/threshold-core/src/optimization_target.rs` (the `redact_local_paths`
+   marker and its test) and the `.gitignore` build-artifacts comment.
+   `~/Development/daedalus` moved to `~/Development/threshold`; GitHub repo
+   `misty-step/daedalus` renamed to `misty-step/threshold`. Remaining
+   `daedalus`/`Daedalus` hits are all under `runs/`, `approvals/`, `deliveries/`,
+   `.groom/lanes/`, and `CHANGELOG.md` — preserved historical evidence per this
+   ticket's own oracle, left untouched.
+3. **README Naming rewrite.** DONE (2026-07-02). Rewrote the Naming section with
+   a Threshold-specific rationale and dropped Crucible from the candidate list.
+4. **Dead-surface retirement.** Not done in this pass — out of scope for the
+   rename; still open.
+5. **Local artifact flush.** Not done in this pass — out of scope for the
+   rename; still open.
+6. **Pycompat retirement decision.** Not done in this pass — out of scope for
+   the rename; still open.
 
 ## Notes
 
@@ -69,3 +76,6 @@ not historical evidence, and retiring dead local/planning surfaces.
   the exact set again when executing.
 - Do not rewrite published history to scrub committed evidence unless the
   operator explicitly authorizes it.
+- 2026-07-02: children 2 and 3 (rename residue + README) closed as part of the
+  operator-ordered daedalus→threshold rename. Children 1, 4, 5, 6 remain open;
+  epic stays `status: ready` until those land.

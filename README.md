@@ -492,23 +492,25 @@ corpus.
 
 ## Naming
 
-Working name: **Threshold**.
+Name: **Threshold** (renamed from the working name Daedalus on 2026-07-01).
 
 Why it fits:
 
-- Threshold is a builder, not a ruler.
-- The mythic tone fits near Olympus and Atlas without making the project a
-  control plane by default.
-- The labyrinth association is useful: this project builds arenas and must also
-  avoid trapping itself in uninspectable complexity.
-- It suggests craft, mechanisms, prototypes, and dangerous competence.
+- The whole project is a search for the configuration that clears a bar — the
+  threshold of acceptable score at acceptable cost — not a search for the
+  single best config in the abstract. "Threshold" names that objective
+  directly.
+- It reads as plain and mechanical rather than mythic, which fits a Rust CLI
+  that produces evidence-backed launch contracts, not a persona.
+- It sits cleanly next to **Crucible**, the sibling product that owns eval
+  design and measurement: Crucible defines what "clears the bar" means,
+  Threshold searches for configs that clear it. See [The Split With
+  Crucible](VISION.md#the-split-with-crucible).
 
-Other candidates:
+Other candidates considered before the rename:
 
 - **Ariadne:** emphasizes guidance, thread, traceability, and escape from the
   maze. Strong if the project becomes more about audit trails than generation.
-- **Crucible:** emphasizes stress testing under heat. Good for an eval-heavy
-  lab, but a little generic.
 - **Atelier:** emphasizes bespoke craft. Good fit for custom agents, less
   technical.
 - **Kiln:** compact, material, experimental. Good if the project centers on
@@ -524,10 +526,6 @@ Other candidates:
 - **Scry:** fits eval/oracle/search, but already present locally.
 - **Glyph:** nice for compact agent recipes, but already present locally.
 - **Laboratory:** radically honest, but already present locally and too broad.
-
-The name can change later. For now, `threshold` is a good working directory name
-because it is evocative, available locally, and carries the right warning label:
-build carefully, or the system becomes a maze.
 
 ## Open Questions
 
