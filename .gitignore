@@ -4,7 +4,7 @@ runs/*/artifacts/
 harbor-build/
 jobs/
 
-# Rust build artifacts (Cargo.lock is committed — daedalus ships as a binary)
+# Rust build artifacts (Cargo.lock is committed — threshold ships as a binary)
 /target
 
 # Claude Code agent worktree staging (transient)

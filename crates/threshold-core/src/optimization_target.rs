@@ -2311,7 +2311,7 @@ fn redact_local_paths_in_value(value: Value) -> Value {
 fn redact_local_paths(text: &str) -> String {
     redact_development_root(
         &redact_development_root(
-            &redact_development_root(text, "daedalus", "$THRESHOLD_REPO"),
+            &redact_development_root(text, "threshold", "$THRESHOLD_REPO"),
             "crucible-evals",
             "$CRUCIBLE_EVALS_REPO",
         ),
@@ -2786,7 +2786,7 @@ mod tests {
     #[test]
     fn development_paths_are_redacted_for_artifacts() {
         assert_eq!(
-            redact_local_paths("/tmp/Development/daedalus/runs/x"),
+            redact_local_paths("/tmp/Development/threshold/runs/x"),
             "$THRESHOLD_REPO/runs/x"
         );
         assert_eq!(
