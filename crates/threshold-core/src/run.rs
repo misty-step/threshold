@@ -2111,7 +2111,7 @@ pub fn run_arena(inputs: ArenaInputs) -> Result<PathBuf, Box<dyn std::error::Err
             // when multiple run_arena calls execute concurrently in tests.
             let workdir = std::env::temp_dir().join(format!(
                 "threshold-{}-{candidate_id}-{task_id}-t{trial}",
-                &stamp
+                stamp
             ));
             std::fs::create_dir_all(&workdir)?;
             let t0 = std::time::Instant::now();
