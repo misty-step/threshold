@@ -248,7 +248,7 @@ pub fn sample_compositions(
             skill_set_name: set_name,
             // Python: list(set_files) if set_files else None
             // In Python, an empty list is falsy, so an empty skill_set → None.
-            skills: set_files.and_then(|f| if f.is_empty() { None } else { Some(f) }),
+            skills: set_files.filter(|f| !f.is_empty()),
             agents_md: agents_opts[i % agents_opts.len()].clone(),
         });
     }
